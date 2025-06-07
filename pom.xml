@@ -12,7 +12,7 @@
         <jakartaee>10.0.0</jakartaee>
     </properties>
     
-<dependencies>
+    <dependencies>
         <!-- Spring MVC -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -54,7 +54,12 @@
             <artifactId>jakarta.servlet.jsp.jstl</artifactId>
             <version>3.0.1</version>
         </dependency>
-
+        <!-- Role -->
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>6.2.5.Final</version>
+        </dependency>
         <!-- Jakarta Annotation API -->
         <dependency>
             <groupId>jakarta.annotation</groupId>
@@ -67,7 +72,13 @@
             <groupId>jakarta.persistence</groupId>
             <artifactId>jakarta.persistence-api</artifactId>
             <version>3.1.0</version>
-        </dependency>  
+        </dependency> 
+        <!-- Microsoft SQL Server JDBC Driver -->
+        <dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>mssql-jdbc</artifactId>
+            <version>12.2.0.jre11</version>
+        </dependency> 
     </dependencies>
     
     <build>
