@@ -1,35 +1,108 @@
-<%@ page language="java" contentType="text/html" pageEncoding="UTF-8"%>
+<%@page language="java" contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
-<html lang="vi">
+<html class="no-js" lang="zxx">
     <head>
-        <meta charset="UTF-8">
-        <title>Online Volunteer Coor</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-              rel="stylesheet">
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Charifit</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/assets/img/favicon.png">
+        <!-- CSS here -->
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/themify-icons.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/nice-select.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/flaticon.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/gijgo.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/animate.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/slicknav.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/style.css">
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="${pageContext.request.contextPath}/">Volunterr Activity</a>
-                <div class="collapse navbar-collapse">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item"><a class="nav-link"
-                                                href="${pageContext.request.contextPath}/activities">Hoạt động</a></li>
-                        <li class="nav-item"><a class="nav-link"
-                                                href="${pageContext.request.contextPath}/users">Người dùng</a></li>
-                        <li class="nav-item"><a class="nav-link"
-                                                href="${pageContext.request.contextPath}/registrations">Đăng ký</a></li>
-                        <li class="nav-item"><a class="nav-link"
-                                                href="${pageContext.request.contextPath}/ratings">Đánh giá</a></li>
-                        <li class="nav-item"><a class="nav-link"
-                                                href="${pageContext.request.contextPath}/notifications">Thông báo</a></li>
-                    </ul>
+        <!--[if lte IE 9]>
+                <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+            <![endif]-->
+
+        <!-- header-start -->
+        <header>
+            <div class="header-area ">
+                <div class="header-top_area">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xl-6 col-md-12 col-lg-8">
+                                <div class="short_contact_list">
+                                    <ul>
+                                        <li><a href="#"> <i class="fa fa-phone"></i> +1 (454) 556-5656</a></li>
+                                        <li><a href="#"> <i class="fa fa-envelope"></i>Yourmail@gmail.com</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-md-6 col-lg-4">
+                                <div class="social_media_links d-none d-lg-block">
+                                    <a href="#">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-pinterest-p"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="sticky-header" class="main-header-area">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <div class="col-xl-3 col-lg-3">
+                                <div class="logo">
+                                    <a href="${pageContext.request.contextPath}/index.html">
+                                        <img src="${pageContext.request.contextPath}/assets/img/logo.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xl-9 col-lg-9">
+                                <div class="main-menu">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a href="${pageContext.request.contextPath}/index.html">home</a></li>
+                                            <li><a href="${pageContext.request.contextPath}/About.html">About</a></li>
+                                            <li><a href="#">blog <i class="ti-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="${pageContext.request.contextPath}/blog.html">blog</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/single-blog.html">single-blog</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">pages <i class="ti-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="${pageContext.request.contextPath}/elements.html">elements</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/Cause.html">Cause</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="${pageContext.request.contextPath}/contact.html">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                    <div class="Appointment">
+                                        <div class="book_btn d-none d-lg-block">
+                                            <a data-scroll-nav='1' href="#">Make a Donate</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav>
-        <div class="container">
-            <!-- Nội dung chính sẽ được thêm vào đây -->
-        </div>
-    </body>
-</html>
+        </header>
