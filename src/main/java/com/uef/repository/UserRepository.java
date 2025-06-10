@@ -9,6 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -33,6 +34,15 @@ public class UserRepository {
         user.setDiaChi(rs.getString("address"));
         user.setNgonNguUuTien(rs.getString("language_preference"));
         return user;
+    }
+
+    public User findByEmail(String email) {
+        try {
+            String sql = "SELECT * FROM Users WHERE email = ?";
+            return jdbcTemplate.queryForObject(sql, this::mapRow, email);
+        } catch (EmptyResultDataAccessException e) {
+            return null;
+        }
     }
 
     public List<User> findAll() {
