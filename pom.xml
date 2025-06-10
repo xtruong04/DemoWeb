@@ -73,12 +73,18 @@
             <artifactId>jakarta.persistence-api</artifactId>
             <version>3.1.0</version>
         </dependency> 
-        <!-- Microsoft SQL Server JDBC Driver -->
+        <!-- JDBC driver for SQL Server -->
         <dependency>
             <groupId>com.microsoft.sqlserver</groupId>
             <artifactId>mssql-jdbc</artifactId>
-            <version>12.2.0.jre11</version>
-        </dependency> 
+            <version>12.2.0.jre11</version> <!-- Hoặc jre8 tuỳ vào JDK -->
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>6.2.5</version>
+        </dependency>
     </dependencies>
     
     <build>
