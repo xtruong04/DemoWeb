@@ -42,7 +42,11 @@
                 </div>
                 <div class="mb-3">
                     <label for="language" class="form-label">Ngôn ngữ ưu tiên</label>
-                    <input type="text" class="form-control" id="language" name="ngonNguUuTien" value="${param.ngonNguUuTien}">
+                    <select class="form-select" id="language" name="ngonNguUuTien">
+                        <option value="">Choose Langues</option>
+                        <option value="Tiếng Việt" ${param.ngonNguUuTien == 'Tiếng Việt' ? 'selected' : ''}>Tiếng Việt</option>
+                        <option value="English" ${param.ngonNguUuTien == 'English' ? 'selected' : ''}>English</option>
+                    </select>
                 </div>
                 <button type="submit" class="btn btn-primary w-100 mb-3">Đăng ký</button>
                 <p class="text-center mt-3">Đã có tài khoản? <a href="${pageContext.request.contextPath}/login" class="text-decoration-none">Đăng nhập ngay</a></p>

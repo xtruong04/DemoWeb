@@ -8,7 +8,7 @@
                     <div class="footer_widget">
                         <div class="footer_logo">
                             <a href="${pageContext.request.contextPath}/">
-                                <img src="${pageContext.request.contextPath}/assets/img/footer_logo.png" alt="">
+                                <img src="${pageContext.request.contextPath}/resources/img/footer_logo.png" alt="">
                             </a>
                         </div>
                         <p class="address_text">Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit, sed do <br> eiusmod tempor incididunt ut labore.
@@ -77,7 +77,7 @@
                             <li>
                                 <div class="thumb">
                                     <a href="#">
-                                        <img src="${pageContext.request.contextPath}/assets/img/news/news_1.png" alt="">
+                                        <img src="${pageContext.request.contextPath}/resources/img/news/news_1.png" alt="">
                                     </a>
                                 </div>
                                 <div class="info">
@@ -91,7 +91,7 @@
                             <li>
                                 <div class="thumb">
                                     <a href="#">
-                                        <img src="${pageContext.request.contextPath}/assets/img/news/news_2.png" alt="">
+                                        <img src="${pageContext.request.contextPath}/resources/img/news/news_2.png" alt="">
                                     </a>
                                 </div>
                                 <div class="info">
@@ -126,30 +126,30 @@
 <!-- footer_end -->
 
 <!-- JS here -->
-    <script src="${pageContext.request.contextPath}/assets/js/vendor/modernizr-3.5.0.min.js"></script>
-    <script src="${pageContext.request.contextPath}/assets/js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="${pageContext.request.contextPath}/assets/js/popper.min.js"></script>
-    <script src="${pageContext.request.contextPath}/assets/js/bootstrap.min.js"></script>
-    <script src="${pageContext.request.contextPath}/assets/js/owl.carousel.min.js"></script>
-    <script src="${pageContext.request.contextPath}/assets/js/isotope.pkgd.min.js"></script>
-    <script src="${pageContext.request.contextPath}/assets/js/ajax-form.js"></script>
-    <script src="${pageContext.request.contextPath}/assets/js/waypoints.min.js"></script>
-    <script src="${pageContext.request.contextPath}/assets/js/jquery.counterup.min.js"></script>
-    <script src="${pageContext.request.contextPath}/assets/js/imagesloaded.pkgd.min.js"></script>
-    <script src="${pageContext.request.contextPath}/assets/js/scrollIt.js"></script>
-    <script src="${pageContext.request.contextPath}/assets/js/jquery.scrollUp.min.js"></script>
-    <script src="${pageContext.request.contextPath}/assets/js/wow.min.js"></script>
-    <script src="${pageContext.request.contextPath}/assets/js/nice-select.min.js"></script>
-    <script src="${pageContext.request.contextPath}/assets/js/jquery.slicknav.min.js"></script>
-    <script src="${pageContext.request.contextPath}/assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="${pageContext.request.contextPath}/assets/js/plugins.js"></script>
-    <script src="${pageContext.request.contextPath}/assets/js/gijgo.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/popper.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/owl.carousel.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/isotope.pkgd.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/ajax-form.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/waypoints.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/jquery.counterup.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/imagesloaded.pkgd.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/scrollIt.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/jquery.scrollUp.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/wow.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/nice-select.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/jquery.slicknav.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/jquery.magnific-popup.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/plugins.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/gijgo.min.js"></script>
     <!--contact js-->
-    <script src="${pageContext.request.contextPath}/assets/js/contact.js"></script>
-    <script src="${pageContext.request.contextPath}/assets/js/jquery.ajaxchimp.min.js"></script>
-    <script src="${pageContext.request.contextPath}/assets/js/jquery.form.js"></script>
-    <script src="${pageContext.request.contextPath}/assets/js/jquery.validate.min.js"></script>
-    <script src="${pageContext.request.contextPath}/assets/js/mail-script.js"></script>
-    <script src="${pageContext.request.contextPath}/assets/js/main.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/contact.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/jquery.ajaxchimp.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/jquery.form.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/jquery.validate.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/mail-script.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
 </body>
 </html>

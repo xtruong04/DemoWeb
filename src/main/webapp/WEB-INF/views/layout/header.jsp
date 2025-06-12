@@ -8,19 +8,19 @@
         <title>Charifit</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/assets/img/favicon.png">
+        <link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/resources/img/favicon.png">
         <!-- CSS here -->
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/owl.carousel.min.css">
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/magnific-popup.css">
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/font-awesome.min.css">
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/themify-icons.css">
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/nice-select.css">
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/flaticon.css">
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/gijgo.css">
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/animate.css">
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/slicknav.css">
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/style.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/magnific-popup.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/font-awesome.min.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/themify-icons.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/nice-select.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/flaticon.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/gijgo.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/animate.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/slicknav.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
     </head>
     <body>
         <!--[if lte IE 9]>
@@ -66,7 +66,7 @@
                             <div class="col-xl-3 col-lg-3">
                                 <div class="logo">
                                     <a href="${pageContext.request.contextPath}/index.html">
-                                        <img src="${pageContext.request.contextPath}/assets/img/logo.png" alt="">
+                                        <img src="${pageContext.request.contextPath}/resources/img/logo.png" alt="">
                                     </a>
                                 </div>
                             </div>

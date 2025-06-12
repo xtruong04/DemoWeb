@@ -15,29 +15,29 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @Controller
-@RequestMapping("/activities")
+@RequestMapping("/admin/activities")
 public class ActivityController {
 
     @Autowired
     private ActivityService activityService;
 
-    private final String path = "/WEB-INF/views/";
+    private final String path = "/WEB-INF/views/admin/";
 
     // Hiển thị danh sách hoạt động
     @GetMapping
     public String listActivities(Model model) {
         List<Activity> activities = activityService.getAll();
         model.addAttribute("activities", activities);
-        model.addAttribute("body", path + "Activity/list.jsp");
-        return "layout/main";
+        model.addAttribute("body", path + "activity/list.jsp");
+        return "admin/layout/main";
     }
 
     // Hiển thị form thêm mới
     @GetMapping("/add")
     public String showAddForm(Model model) {
         model.addAttribute("activity", new Activity());
-        model.addAttribute("body", path + "activities/form.jsp");
-        return "layout/main";
+        model.addAttribute("body", path + "activity/form.jsp");
+        return "admin/layout/main";
     }
 
     // Xử lý thêm mới
