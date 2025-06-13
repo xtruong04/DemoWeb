@@ -20,6 +20,12 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
+    public List<User> getCoordinators() {
+    return userRepository.findAll().stream()
+        .filter(user -> "coordinator".equalsIgnoreCase(user.getVaiTro()))
+        .toList(); // hoặc .collect(Collectors.toList()) nếu dùng Java 8
+    }
+    
     public List<User> getAll() {
         return userRepository.findAll();
     }

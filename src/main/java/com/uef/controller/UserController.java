@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/users")
+@RequestMapping("admin/users")
 public class UserController {
 
     @Autowired
     private UserService userService;
 
-    private final String path = "/WEB-INF/views/";
+    private final String path = "/WEB-INF/views/admin/";
 
     // Hiển thị danh sách người dùng
     @GetMapping
@@ -27,7 +27,7 @@ public class UserController {
         List<User> users = userService.getAll();
         model.addAttribute("users", users);
         model.addAttribute("body", path + "users/list.jsp");
-        return "layout/main";
+        return "admin/layout/main";
     }
 
     // Hiển thị form thêm mới

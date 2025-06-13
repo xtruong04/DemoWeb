@@ -37,7 +37,7 @@
             <form:label path="dieuPhoiVien" cssClass="form-label">Coordinator</form:label>
             <form:select path="dieuPhoiVien.maNguoiDung" cssClass="form-select">
                 <c:forEach items="${users}" var="user">
-                    <form:option value="${user.maNguoiDung}">${user.tenNguoiDung} (${user.email})</form:option>
+                    <form:option value="${user.maNguoiDung}">${user.tenNguoiDung}</form:option>
                 </c:forEach>
             </form:select>
         </div>
@@ -55,6 +55,6 @@
                 </c:otherwise>
             </c:choose>
         </button>
-        <a href="<c:url value='/activities' />" class="btn btn-secondary">Cancel</a>
+        <a href="<c:url value='/admin/activities' />" class="btn btn-secondary">Cancel</a>
     </form:form>
 </div>

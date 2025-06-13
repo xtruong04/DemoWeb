@@ -60,8 +60,7 @@ public class ActivityRepository {
                 activity.getNgayGio(),
                 activity.getDiaDiem(),
                 activity.getSoLuongToiDa(),
-                1,
-                //activity.getDieuPhoiVien().getMaNguoiDung(), // Assuming User has getId() method
+                activity.getDieuPhoiVien().getMaNguoiDung(), // Assuming User has getId() method
                 activity.getHinhAnh());
     }
 
