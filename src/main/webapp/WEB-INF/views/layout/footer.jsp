@@ -11,7 +11,11 @@
                                 <img src="${pageContext.request.contextPath}/resources/img/footer_logo.png" alt="">
                             </a>
                         </div>
-                        <p class="address_text">Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit, sed do <br> eiusmod tempor incididunt ut labore.
+                        <p class="address_text">Online volunteer coordination involves  
+                            <br> organizing and managing , remote 
+                            <br> volunteers using digital tools for task assignment, clear communication
+                            <br> fostering engagement, and ensuring they feel 
+                            <br> valued while working toward shared goals.
                         </p>
                         <div class="socail_links">
                             <ul>
@@ -60,10 +64,10 @@
                             Contacts
                         </h3>
                         <div class="contacts">
-                            <p>+2(305) 587-3407 <br>
+                            <p>+84 982710860 <br>
                                 info@loveuscharity.com <br>
-                                Flat 20, Reynolds Neck, North
-                                Helenaville, FV77 8WS
+                                141-145, Điện Biên Phủ, Phường 2, 
+                                Bình Thạnh, Hồ Chí Minh, Vietnam
                             </p>
                         </div>
                     </div>
@@ -126,30 +130,30 @@
 <!-- footer_end -->
 
 <!-- JS here -->
-    <script src="${pageContext.request.contextPath}/resources/js/vendor/modernizr-3.5.0.min.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/popper.min.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/owl.carousel.min.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/isotope.pkgd.min.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/ajax-form.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/waypoints.min.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/jquery.counterup.min.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/imagesloaded.pkgd.min.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/scrollIt.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/jquery.scrollUp.min.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/wow.min.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/nice-select.min.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/jquery.slicknav.min.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/jquery.magnific-popup.min.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/plugins.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/gijgo.min.js"></script>
-    <!--contact js-->
-    <script src="${pageContext.request.contextPath}/resources/js/contact.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/jquery.ajaxchimp.min.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/jquery.form.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/jquery.validate.min.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/mail-script.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/vendor/modernizr-3.5.0.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/vendor/jquery-1.12.4.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/popper.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/owl.carousel.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/isotope.pkgd.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/ajax-form.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/waypoints.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/jquery.counterup.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/imagesloaded.pkgd.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/scrollIt.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/jquery.scrollUp.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/wow.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/nice-select.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/jquery.slicknav.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/jquery.magnific-popup.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/plugins.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/gijgo.min.js"></script>
+<!--contact js-->
+<script src="${pageContext.request.contextPath}/resources/js/contact.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/jquery.ajaxchimp.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/jquery.form.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/jquery.validate.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/mail-script.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
 </body>
 </html>

@@ -102,17 +102,15 @@
             <div class="col-lg-7">
                 <div class="activites_info">
                     <div class="section_title">
-                        <h3><span>Watch Our Latest</span><br>
-                            Activities</h3>
+                        <h3><span>About Us</span>
+                        </h3>
                     </div>
-                    <p class="para_1">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do 
-                        eiusmod tempor incididunt ut labore dolore magna aliqua. 
-                        enim minim veniam, quis nostrud exercitation.</p>
-                    <p class="para_2">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do 
-                        eiusmod tempor incididunt ut labore dolore magna aliqua. 
-                        enim minim veniam, quis nostrud exercitation. tempor 
-                        incididunt ut labore dolore magna aliqua. enim minim 
-                        veniam, quis nostrud exercitation.</p>
+                    <p class="para_1">Online volunteer coordination involves organizing and managing volunteers 
+                        remotely to support various projects or causes. It requires clear communication, task 
+                        delegation, and the use of digital tools like project management platforms, video conferencing, 
+                        and collaborative documents.</p>
+                    <p class="para_2">Effective coordinators foster engagement, provide guidance, and ensure volunteers
+                        feel valued while working towards shared goals from diverse locations..</p>
                     <a href="#" data-scroll-nav='1' class="boxed-btn4">Donate Now</a>
                 </div>
             </div>
@@ -234,61 +232,6 @@
 <!-- popular_causes_area_end -->
 
 <!-- counter_area_start -->
-<div class="counter_area">
-    <div class="container">
-        <div class="counter_bg overlay">
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="single_counter d-flex align-items-center justify-content-center">
-                        <div class="icon">
-                            <i class="flaticon-calendar"></i>
-                        </div>
-                        <div class="events">
-                            <h3 class="counter">120</h3>
-                            <p>Finished Event</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="single_counter d-flex align-items-center justify-content-center">
-                        <div class="icon">
-                            <i class="flaticon-heart-beat"></i>
-                        </div>
-                        <div class="events">
-                            <h3 class="counter">120</h3>
-                            <p>Finished Event</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="single_counter d-flex align-items-center justify-content-center">
-                        <div class="icon">
-                            <i class="flaticon-in-love"></i>
-                        </div>
-                        <div class="events">
-                            <h3 class="counter">120</h3>
-                            <p>Finished Event</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="single_counter d-flex align-items-center justify-content-center">
-                        <div class="icon">
-                            <i class="flaticon-hug"></i>
-                        </div>
-                        <div class="events">
-                            <h3 class="counter">120</h3>
-                            <p>Finished Event</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- counter_area_end -->
-
-<!-- our_volunteer_area_start -->
 <div class="our_volunteer_area section_padding">
     <div class="container">
         <div class="row justify-content-center">
@@ -298,6 +241,7 @@
                 </div>
             </div>
         </div>
+        <!-- Hàng đầu tiên với hai tình nguyện viên -->
         <div class="row justify-content-center">
             <div class="col-lg-4 col-md-6">
                 <div class="single_volenteer">
@@ -322,8 +266,8 @@
                             </ul>
                         </div>
                         <div class="info_inner">
-                            <h4>Sakil khan</h4>
-                            <p>Donner</p>
+                            <h4>Sakil Khan</h4>
+                            <p>Volunteer</p>
                         </div>
                     </div>
                 </div>
@@ -357,6 +301,11 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <!-- Thêm khoảng trống giữa hai hàng -->
+        <div style="margin-bottom: 30px;"></div>
+        <!-- Hàng thứ hai với hai tình nguyện viên -->
+        <div class="row justify-content-center">
             <div class="col-lg-4 col-md-6">
                 <div class="single_volenteer">
                     <div class="volenteer_thumb">
@@ -381,6 +330,35 @@
                         </div>
                         <div class="info_inner">
                             <h4>Sabbir Ahmed</h4>
+                            <p>Volunteer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single_volenteer">
+                    <div class="volenteer_thumb">
+                        <img src="${pageContext.request.contextPath}/resources/img/volenteer/4.jpg" alt="">
+                    </div>
+                    <div class="voolenteer_info d-flex align-items-end">
+                        <div class="social_links">
+                            <ul>
+                                <li>
+                                    <a href="https://www.facebook.com/quoc.anh.908826"> <i class="fa fa-facebook"></i> </a>
+                                </li>
+                                <li>
+                                    <a href="#"> <i class="fa fa-pinterest"></i> </a>
+                                </li>
+                                <li>
+                                    <a href="#"> <i class="fa fa-linkedin"></i> </a>
+                                </li>
+                                <li>
+                                    <a href="#"> <i class="fa fa-twitter"></i> </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="info_inner">
+                            <h4>Đào Anh Quốc</h4>
                             <p>Volunteer</p>
                         </div>
                     </div>

@@ -5,7 +5,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Charifit</title>
+        <title>Vonlunteer</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/resources/img/favicon.png">
@@ -36,8 +36,8 @@
                             <div class="col-xl-6 col-md-12 col-lg-8">
                                 <div class="short_contact_list">
                                     <ul>
-                                        <li><a href="#"> <i class="fa fa-phone"></i> +1 (454) 556-5656</a></li>
-                                        <li><a href="#"> <i class="fa fa-envelope"></i>Yourmail@gmail.com</a></li>
+                                        <li><a href="#"> <i class="fa fa-phone"></i> +84 9821710860</a></li>
+                                        <li><a href="#"> <i class="fa fa-envelope"></i>volunteercoor@gmail.com</a></li>
                                     </ul>
                                 </div>
                             </div>
