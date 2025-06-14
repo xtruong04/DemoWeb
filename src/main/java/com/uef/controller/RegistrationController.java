@@ -13,21 +13,21 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/registrations")
+@RequestMapping("admin/registrations")
 public class RegistrationController {
 
     @Autowired
     private RegistrationService registrationService;
 
-    private final String path = "/WEB-INF/views/";
+    private final String path = "/WEB-INF/views/admin";
 
     // Hiển thị danh sách đăng ký
     @GetMapping
     public String listRegistrations(Model model) {
         List<Registration> registrations = registrationService.getAll();
         model.addAttribute("registrations", registrations);
-        model.addAttribute("body", path + "registrations/list.jsp");
-        return "layout/main";
+        model.addAttribute("body", "/WEB-INF/views/admin/registrations/list.jsp");
+        return "admin/layout/main";
     }
 
     // Hiển thị form thêm mới
@@ -35,14 +35,14 @@ public class RegistrationController {
     public String showAddForm(Model model) {
         model.addAttribute("registration", new Registration());
         model.addAttribute("body", path + "registrations/form.jsp");
-        return "layout/main";
+        return "admin/layout/main";
     }
 
     // Xử lý thêm mới
     @PostMapping("/add")
     public String addRegistration(@ModelAttribute Registration registration) {
         registrationService.add(registration);
-        return "redirect:/registrations";
+        return "redirect:/admin/registrations";
     }
 
     // Hiển thị form cập nhật
@@ -50,24 +50,24 @@ public class RegistrationController {
     public String showEditForm(@PathVariable("id") int id, Model model) {
         Registration registration = registrationService.getById(id);
         if (registration == null) {
-            return "redirect:/registrations";
+            return "redirect:/admin/registrations";
         }
         model.addAttribute("registration", registration);
         model.addAttribute("body", path + "registrations/form.jsp");
-        return "layout/main";
+        return "admin/layout/main";
     }
 
     // Xử lý cập nhật
     @PostMapping("/edit")
     public String updateRegistration(@ModelAttribute Registration registration) {
         registrationService.update(registration);
-        return "redirect:/registrations";
+        return "redirect:/admin/registrations";
     }
 
     // Xử lý xóa
     @GetMapping("/delete/{id}")
     public String deleteRegistration(@PathVariable("id") int id) {
         registrationService.delete(id);
-        return "redirect:/registrations";
+        return "redirect:/admin/registrations";
     }
 }

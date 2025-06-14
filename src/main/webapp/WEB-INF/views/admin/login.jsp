@@ -19,7 +19,7 @@
     <body>
         <div class="login-container">
             <h2 class="text-center mb-4">Đăng nhập</h2>
-            <form action="${pageContext.request.contextPath}/login" method="post">
+            <form action="${pageContext.request.contextPath}/admin/dashboard" method="get">
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
                     <input type="email" class="form-control" id="email" name="email" value="${param.email}" required>
@@ -29,9 +29,7 @@
                     <input type="password" class="form-control" id="password" name="password" required>
                 </div>
                 <button type="submit" class="btn btn-primary w-100 mb-3">Đăng nhập</button>
-                <a href="${pageContext.request.contextPath}/forgot-password" class="text-decoration-none">Quên mật khẩu?</a>
             </form>
-
         </div>
     </body>
 </html>

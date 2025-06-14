@@ -36,6 +36,15 @@ public class UserRepository {
         return user;
     }
 
+    public User findByTenNguoiDung(String tenNguoiDung) {
+        try {
+            String sql = "SELECT * FROM Users WHERE name = ?";
+            return jdbcTemplate.queryForObject(sql, this::mapRow, tenNguoiDung);
+        } catch (EmptyResultDataAccessException e) {
+            return null;
+        }
+    }
+
     public User findByEmail(String email) {
         try {
             String sql = "SELECT * FROM Users WHERE email = ?";

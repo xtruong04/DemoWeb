@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/ratings")
+@RequestMapping("/admin/ratings")
 public class RatingController {
 
     @Autowired
     private RatingService ratingService;
 
-    private final String path = "/WEB-INF/views/";
+    private final String path = "/WEB-INF/views/admin/";
 
     // Hiển thị danh sách đánh giá
     @GetMapping
@@ -27,7 +27,7 @@ public class RatingController {
         List<Rating> ratings = ratingService.getAll();
         model.addAttribute("ratings", ratings);
         model.addAttribute("body", path + "ratings/list.jsp");
-        return "layout/main";
+        return "admin/layout/main";
     }
 
     // Hiển thị form thêm mới
@@ -35,14 +35,14 @@ public class RatingController {
     public String showAddForm(Model model) {
         model.addAttribute("rating", new Rating());
         model.addAttribute("body", path + "ratings/form.jsp");
-        return "layout/main";
+        return "admin/layout/main";
     }
 
     // Xử lý thêm mới
     @PostMapping("/add")
     public String addRating(@ModelAttribute Rating rating) {
         ratingService.add(rating);
-        return "redirect:/ratings";
+        return "redirect:/admin/ratings";
     }
 
     // Hiển thị form cập nhật
@@ -50,24 +50,24 @@ public class RatingController {
     public String showEditForm(@PathVariable("id") int id, Model model) {
         Rating rating = ratingService.getById(id);
         if (rating == null) {
-            return "redirect:/ratings";
+            return "redirect:/admin/ratings";
         }
         model.addAttribute("rating", rating);
         model.addAttribute("body", path + "ratings/form.jsp");
-        return "layout/main";
+        return "admin/layout/main";
     }
 
     // Xử lý cập nhật
     @PostMapping("/edit")
     public String updateRating(@ModelAttribute Rating rating) {
         ratingService.update(rating);
-        return "redirect:/ratings";
+        return "redirect:/admin/ratings";
     }
 
     // Xử lý xóa
     @GetMapping("/delete/{id}")
     public String deleteRating(@PathVariable("id") int id) {
         ratingService.delete(id);
-        return "redirect:/ratings";
+        return "redirect:/admin/ratings";
     }
 }

@@ -1,4 +1,3 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <div class="main-content">
     <h1 class="mb-4">Users</h1>
@@ -6,19 +5,20 @@
         <div class="card-body">
             <h3 class="card-title">User List</h3>
             <div class="d-flex justify-content-between align-items-center mb-3">
-                <div></div> <!-- Placeholder để căn chỉnh -->
+                <div></div>
+                <a href="${pageContext.request.contextPath}/admin/users/add" class="btn btn-success">+ Add New</a>
             </div>
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th>Mã Người Dùng</th>
+                        <th>ID</th>
                         <th>Email</th>
-                        <th>Tên</th>
-                        <th>Vai Trò</th>
-                        <th>Số Điện Thoại</th>
-                        <th>Địa Chỉ</th>
-                        <th>Ngôn Ngữ Ưu Tiên</th>
-                        <th>Hành Động</th>
+                        <th>Name</th>
+                        <th>Role</th>
+                        <th>Phone</th>
+                        <th>Address</th>
+                        <th>Language</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -32,8 +32,8 @@
                             <td>${u.diaChi}</td>
                             <td>${u.ngonNguUuTien}</td>
                             <td>
-                                <a href="${pageContext.request.contextPath}/users/edit/${u.maNguoiDung}" class="btn btn-sm btn-primary">Sửa</a>
-                                <a href="${pageContext.request.contextPath}/users/delete/${u.maNguoiDung}" class="btn btn-sm btn-danger" onclick="return confirm('Bạn chắc chắn muốn xóa?')">Xóa</a>
+                                <a href="${pageContext.request.contextPath}/admin/users/edit/${u.maNguoiDung}" class="btn btn-sm btn-primary">Edit</a>
+                                <a href="${pageContext.request.contextPath}/admin/users/delete/${u.maNguoiDung}" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete?')">Delete</a>
                             </td>
                         </tr>
                     </c:forEach>

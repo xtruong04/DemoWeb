@@ -21,11 +21,19 @@ public class UserService {
     private UserRepository userRepository;
 
     public List<User> getCoordinators() {
-    return userRepository.findAll().stream()
-        .filter(user -> "coordinator".equalsIgnoreCase(user.getVaiTro()))
-        .toList(); // hoặc .collect(Collectors.toList()) nếu dùng Java 8
+        return userRepository.findAll().stream()
+                .filter(user -> "coordinator".equalsIgnoreCase(user.getVaiTro()))
+                .toList(); // hoặc .collect(Collectors.toList()) nếu dùng Java 8
     }
-    
+
+    public User authenticate(String tenNguoiDung, String matKhau) {
+        User user = userRepository.findByTenNguoiDung(tenNguoiDung);
+        if (user != null && user.getMatKhau().equals(matKhau)) {
+            return user;
+        }
+        return null;
+    }
+
     public List<User> getAll() {
         return userRepository.findAll();
     }

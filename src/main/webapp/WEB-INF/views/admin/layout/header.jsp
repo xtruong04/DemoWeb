@@ -111,31 +111,47 @@ html lang="en">
 </head>
 <body>
     <!-- Sidebar -->
-    <div class="sidebar" id="sidebar">
-        <h2>Admin Panel</h2>
-        <ul class="nav flex-column">
-            <li class="nav-item">
-                <a class="nav-link ${param.active == 'dashboard' ? 'active' : ''}" href="${pageContext.request.contextPath}/admin/dashboard">
-                    <i class="fas fa-tachometer-alt me-2"></i> Dashboard
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link ${param.active == 'activities' ? 'active' : ''}" href="${pageContext.request.contextPath}/admin/activities">
-                    <i class="fas fa-file-alt me-2"></i> Activities
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link ${param.active == 'users' ? 'active' : ''}" href="${pageContext.request.contextPath}/admin/users">
-                    <i class="fas fa-users me-2"></i> Users
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="${pageContext.request.contextPath}/logout">
-                    <i class="fas fa-sign-out-alt me-2"></i> Logout
-                </a>
-            </li>
-        </ul>
-    </div>
+  <!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+    <h2>Admin Panel</h2>
+    <ul class="nav flex-column">
+        <li class="nav-item">
+            <a class="nav-link ${param.active == 'dashboard' ? 'active' : ''}" href="${pageContext.request.contextPath}/admin/dashboard">
+                <i class="fas fa-chart-line me-2"></i> Dashboard
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link ${param.active == 'activities' ? 'active' : ''}" href="${pageContext.request.contextPath}/admin/activities">
+                <i class="fas fa-calendar-check me-2"></i> Activities
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link ${param.active == 'users' ? 'active' : ''}" href="${pageContext.request.contextPath}/admin/users">
+                <i class="fas fa-user-friends me-2"></i> Users
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link ${param.active == 'notifications' ? 'active' : ''}" href="${pageContext.request.contextPath}/admin/notifications">
+                <i class="fas fa-bell me-2"></i> Notifications
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link ${param.active == 'rating' ? 'active' : ''}" href="${pageContext.request.contextPath}/admin/ratings">
+                <i class="fas fa-star me-2"></i> Ratings
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link ${param.active == 'registrations' ? 'active' : ''}" href="${pageContext.request.contextPath}/admin/registrations">
+                <i class="fas fa-edit me-2"></i> Registrations
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="${pageContext.request.contextPath}/admin/logout">
+                <i class="fas fa-sign-out-alt me-2"></i> Logout
+            </a>
+        </li>
+    </ul>
+</div>
 
     <!-- Top Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
@@ -163,9 +179,8 @@ html lang="en">
     </nav>
 
     <!-- Main Content -->
-    <div class="main-content">
-        <jsp:include page="${body}" />
-    </div>
+  
+</div>
 
     <script>
         function toggleSidebar() {

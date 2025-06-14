@@ -4,7 +4,9 @@
  */
 package com.uef.repository;
 
+import com.uef.model.Activity;
 import com.uef.model.Registration;
+import com.uef.model.User;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
@@ -28,12 +30,41 @@ public class RegistrationRepository {
         registration.setMaDangKy(rs.getInt("registration_id"));
         registration.setNgayDangKy(rs.getObject("registration_date", LocalDateTime.class));
         registration.setTrangThaiCheckIn(rs.getBoolean("check_in_status"));
-        // User and Activity are not mapped here; they require separate queries or joins
+
+        // Gán thông tin người dùng
+        User user = new User();
+        user.setMaNguoiDung(rs.getInt("u_id"));
+        user.setTenNguoiDung(rs.getString("u_name"));
+        user.setEmail(rs.getString("u_email"));
+        user.setVaiTro(rs.getString("u_role"));
+        user.setSoDienThoai(rs.getString("u_phone"));
+        user.setDiaChi(rs.getString("u_address"));
+        user.setNgonNguUuTien(rs.getString("u_lang"));
+        registration.setNguoiDung(user);
+
+        // Gán thông tin hoạt động (nếu có)
+        int activityId = rs.getInt("a_id");
+        if (!rs.wasNull()) {
+            Activity activity = new Activity();
+            activity.setMaHoatDong(activityId);
+            activity.setTieuDe(rs.getString("a_title"));
+            activity.setMoTa(rs.getString("a_description"));
+            registration.setHoatDong(activity);
+        }
+
         return registration;
     }
 
     public List<Registration> findAll() {
-        String sql = "SELECT * FROM Registrations";
+        String sql
+                = "SELECT r.*, "
+                + "       u.user_id AS u_id, u.name AS u_name, u.email AS u_email, u.role AS u_role, "
+                + "       u.phone AS u_phone, u.address AS u_address, u.language_preference AS u_lang, "
+                + "       a.activity_id AS a_id, a.title AS a_title, a.description AS a_description "
+                + "FROM Registrations r "
+                + "JOIN Users u ON r.user_id = u.user_id "
+                + "LEFT JOIN Activities a ON r.activity_id = a.activity_id";
+
         return jdbcTemplate.query(sql, this::mapRow);
     }
 

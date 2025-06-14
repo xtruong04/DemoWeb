@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/notifications")
+@RequestMapping("/admin/notifications")
 public class NotificationController {
 
     @Autowired
     private NotificationService notificationService;
 
-    private final String path = "/WEB-INF/views/";
+    private final String path = "/WEB-INF/views/admin/";
 
     // Hiển thị danh sách thông báo
     @GetMapping
@@ -27,22 +27,22 @@ public class NotificationController {
         List<Notification> notifications = notificationService.getAll();
         model.addAttribute("notifications", notifications);
         model.addAttribute("body", path + "notifications/list.jsp");
-        return "layout/main";
+        return "admin/layout/main";
     }
 
     // Hiển thị form thêm mới
     @GetMapping("/add")
     public String showAddForm(Model model) {
         model.addAttribute("notification", new Notification());
-        model.addAttribute("body", path + "notifications/form.jsp");
-        return "layout/main";
+        model.addAttribute("body", path + "/WEB-INF/views/admin/notifications/form.jsp");
+        return "admin/layout/main";
     }
 
     // Xử lý thêm mới
     @PostMapping("/add")
     public String addNotification(@ModelAttribute Notification notification) {
         notificationService.add(notification);
-        return "redirect:/notifications";
+        return "redirect:/admin/notifications";
     }
 
     // Hiển thị form cập nhật
@@ -50,24 +50,24 @@ public class NotificationController {
     public String showEditForm(@PathVariable("id") int id, Model model) {
         Notification notification = notificationService.getById(id);
         if (notification == null) {
-            return "redirect:/notifications";
+            return "redirect:/admin/notifications";
         }
         model.addAttribute("notification", notification);
         model.addAttribute("body", path + "notifications/form.jsp");
-        return "layout/main";
+        return "admin/layout/main";
     }
 
     // Xử lý cập nhật
     @PostMapping("/edit")
     public String updateNotification(@ModelAttribute Notification notification) {
         notificationService.update(notification);
-        return "redirect:/notifications";
+        return "redirect:/admin/notifications";
     }
 
     // Xử lý xóa
     @GetMapping("/delete/{id}")
     public String deleteNotification(@PathVariable("id") int id) {
         notificationService.delete(id);
-        return "redirect:/notifications";
+        return "redirect:/admin/notifications";
     }
 }
