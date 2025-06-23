@@ -1,53 +1,57 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+
 <div class="main-content">
     <h3 class="mb-4">
         <c:choose>
-            <c:when test="${activity.maHoatDong != null}">
-                Edit Activity
+            <c:when test="${notification.maThongBao != null}">
+                Edit Notification
             </c:when>
             <c:otherwise>
-                Add New Activity
+                Add New Notification
             </c:otherwise>
         </c:choose>
     </h3>
-    <form:form modelAttribute="activity" method="post" cssClass="needs-validation">
-        <form:hidden path="maHoatDong" />
+
+    <form:form modelAttribute="notification" method="post" cssClass="needs-validation">
+        <form:hidden path="maThongBao" />
+
+        <!-- Ng??i dùng -->
         <div class="mb-3">
-            <form:label path="tieuDe" cssClass="form-label">Title</form:label>
-            <form:input path="tieuDe" cssClass="form-control" required="true"/>
-        </div>
-        <div class="mb-3">
-            <form:label path="moTa" cssClass="form-label">Description</form:label>
-            <form:textarea path="moTa" cssClass="form-control"/>
-        </div>
-        <div class="mb-3">
-            <form:label path="ngayGio" cssClass="form-label">Date and Time</form:label>
-            <form:input path="ngayGio" cssClass="form-control" type="datetime-local" required="true"/>
-        </div>
-        <div class="mb-3">
-            <form:label path="diaDiem" cssClass="form-label">Location</form:label>
-            <form:input path="diaDiem" cssClass="form-control"/>
-        </div>
-        <div class="mb-3">
-            <form:label path="soLuongToiDa" cssClass="form-label">Max Participants</form:label>
-            <form:input path="soLuongToiDa" cssClass="form-control" type="number" required="true"/>
-        </div>
-        <div class="mb-3">
-            <form:label path="dieuPhoiVien" cssClass="form-label">Coordinator</form:label>
-            <form:select path="dieuPhoiVien.maNguoiDung" cssClass="form-select">
-                <c:forEach items="${users}" var="user">
-                    <form:option value="${user.maNguoiDung}">${user.tenNguoiDung}</form:option>
+            <form:label path="nguoiDung.maNguoiDung" cssClass="form-label">User</form:label>
+            <form:select path="nguoiDung.maNguoiDung" cssClass="form-select" required="true">
+                <c:forEach items="${users}" var="u">
+                    <form:option value="${u.maNguoiDung}">${u.tenNguoiDung}</form:option>
                 </c:forEach>
             </form:select>
         </div>
+
+        <!-- Ho?t ??ng (có th? null) -->
         <div class="mb-3">
-            <form:label path="hinhAnh" cssClass="form-label">Image URL</form:label>
-            <form:input path="hinhAnh" cssClass="form-control"/>
+            <form:label path="hoatDong.maHoatDong" cssClass="form-label">Activity (optional)</form:label>
+            <form:select path="hoatDong.maHoatDong" cssClass="form-select">
+                <form:option value="">-- None --</form:option>
+                <c:forEach items="${activities}" var="a">
+                    <form:option value="${a.maHoatDong}">${a.tieuDe}</form:option>
+                </c:forEach>
+            </form:select>
         </div>
+
+        <!-- N?i dung -->
+        <div class="mb-3">
+            <form:label path="noiDung" cssClass="form-label">Message</form:label>
+            <form:textarea path="noiDung" cssClass="form-control" required="true" />
+        </div>
+
+        <!-- Ngày g?i -->
+        <div class="mb-3">
+            <form:label path="ngayGui" cssClass="form-label">Sent At</form:label>
+            <form:input path="ngayGui" type="datetime-local" cssClass="form-control" />
+        </div>
+
         <button type="submit" class="btn btn-primary">
             <c:choose>
-                <c:when test="${activity.maHoatDong != null}">
+                <c:when test="${notification.maThongBao != null}">
                     Update
                 </c:when>
                 <c:otherwise>
@@ -55,6 +59,6 @@
                 </c:otherwise>
             </c:choose>
         </button>
-        <a href="<c:url value='/admin/activities' />" class="btn btn-secondary">Cancel</a>
+        <a href="<c:url value='/admin/notifications' />" class="btn btn-secondary">Cancel</a>
     </form:form>
 </div>

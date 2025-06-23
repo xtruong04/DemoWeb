@@ -38,7 +38,7 @@ public class AuthController {
         if (user != null && user.getMatKhau().equals(password)) {
             // Logic đăng nhập thành công (ví dụ: lưu session hoặc chuyển hướng)
             model.addAttribute("message", "Đăng nhập thành công!");
-            return "redirect:/activities"; // Chuyển hướng đến trang hoạt động
+            return "redirect:/"; // Chuyển hướng đến trang hoạt động
         } else {
             model.addAttribute("error", "Email hoặc mật khẩu không đúng!");
             return "login"; // Trả về lại form với thông báo lỗi

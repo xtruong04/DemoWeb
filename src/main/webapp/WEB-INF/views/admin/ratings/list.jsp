@@ -21,7 +21,6 @@
                         <th>Hoạt động</th>
                         <th>Điểm số</th>
                         <th>Bình luận</th>
-                        <th>Hành động</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -33,8 +32,6 @@
                             <td>${r.diemDanhGia}</td>
                             <td>${r.binhLuan}</td>
                             <td>
-                                <a href="${pageContext.request.contextPath}/admin/ratings/edit/${r.maDanhGia}" class="btn btn-sm btn-primary">Sửa</a>
-                                <a href="${pageContext.request.contextPath}/admin/ratings/delete/${r.maDanhGia}" class="btn btn-sm btn-danger" onclick="return confirm('Bạn chắc chắn muốn xóa?')">Xóa</a>
                             </td>
                         </tr>
                     </c:forEach>

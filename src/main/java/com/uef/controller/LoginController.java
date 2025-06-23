@@ -25,8 +25,7 @@ public class LoginController {
 
     @Autowired
     private UserService userService;
-    private final String path = "/WEB-INF/views/admin/";
-
+    
     @GetMapping
     public String showLoginForm() {
         return "admin/login"; // đường dẫn: /WEB-INF/views/admin/login.jsp
@@ -35,11 +34,13 @@ public class LoginController {
     @PostMapping("/login")
     public String login(@ModelAttribute("user") User userForm, HttpSession session, Model model) {
         User user = userService.authenticate(userForm.getTenNguoiDung(), userForm.getMatKhau());
+
         if (user != null && "coordinator".equalsIgnoreCase(user.getVaiTro())) {
             session.setAttribute("user", user);
             return "redirect:/admin/dashboard";
         }
-        model.addAttribute("error", "Sai tài khoản hoặc mật khẩu");
+
+        model.addAttribute("error", "Bạn không có quyền truy cập hoặc sai tài khoản/mật khẩu.");
         return "admin/login";
     }
 

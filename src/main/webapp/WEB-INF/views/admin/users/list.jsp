@@ -6,7 +6,6 @@
             <h3 class="card-title">User List</h3>
             <div class="d-flex justify-content-between align-items-center mb-3">
                 <div></div>
-                <a href="${pageContext.request.contextPath}/admin/users/add" class="btn btn-success">+ Add New</a>
             </div>
             <table class="table table-hover">
                 <thead>

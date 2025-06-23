@@ -54,6 +54,11 @@ public class UserRepository {
         }
     }
 
+    public List<User> findAllCoordinators() {
+        String sql = "SELECT * FROM Users WHERE role = 'coordinator'";
+        return jdbcTemplate.query(sql, this::mapRow);
+    }
+
     public List<User> findAll() {
         String sql = "SELECT * FROM Users";
         return jdbcTemplate.query(sql, this::mapRow);

@@ -54,7 +54,7 @@ public class UserController {
         }
         model.addAttribute("user", user);
         model.addAttribute("body", path + "users/form.jsp");
-        return "layout/main";
+        return "admin/layout/main";
     }
 
     // Xử lý cập nhật

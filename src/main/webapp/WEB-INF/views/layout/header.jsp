@@ -74,21 +74,11 @@
                                 <div class="main-menu">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><a href="${pageContext.request.contextPath}/index.html">home</a></li>
-                                            <li><a href="${pageContext.request.contextPath}/About.html">About</a></li>
-                                            <li><a href="#">blog <i class="ti-angle-down"></i></a>
-                                                <ul class="submenu">
-                                                    <li><a href="${pageContext.request.contextPath}/blog.html">blog</a></li>
-                                                    <li><a href="${pageContext.request.contextPath}/single-blog.html">single-blog</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">pages <i class="ti-angle-down"></i></a>
-                                                <ul class="submenu">
-                                                    <li><a href="${pageContext.request.contextPath}/elements.html">elements</a></li>
-                                                    <li><a href="${pageContext.request.contextPath}/Cause.html">Cause</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="${pageContext.request.contextPath}/contact.html">Contact</a></li>
+                                            <li><a href="#home">Home</a></li>
+                                            <li><a href="#about">About</a></li>
+                                            <li><a href="#blog">Blog</a></li>
+                                            <li><a href="#pages">Pages</a></li>
+                                            <li><a href="#contact">Contact</a></li>
                                         </ul>
                                     </nav>
                                     <div class="Appointment">

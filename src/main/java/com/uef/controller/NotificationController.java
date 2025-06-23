@@ -1,6 +1,9 @@
 package com.uef.controller;
 
 import com.uef.model.Notification;
+import com.uef.repository.ActivityRepository;
+import com.uef.repository.NotificationRepository;
+import com.uef.repository.UserRepository;
 import com.uef.service.NotificationService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +22,15 @@ public class NotificationController {
     @Autowired
     private NotificationService notificationService;
 
+    @Autowired
+    private UserRepository userRepository;
+
+    @Autowired
+    private ActivityRepository activityRepository;
+
+    @Autowired
+    private NotificationRepository notificationRepository;
+
     private final String path = "/WEB-INF/views/admin/";
 
     // Hiển thị danh sách thông báo
@@ -34,11 +46,13 @@ public class NotificationController {
     @GetMapping("/add")
     public String showAddForm(Model model) {
         model.addAttribute("notification", new Notification());
-        model.addAttribute("body", path + "/WEB-INF/views/admin/notifications/form.jsp");
+        model.addAttribute("users", userRepository.findAllCoordinators()); // 🔥 Chỉ lấy coordinator
+        model.addAttribute("activities", activityRepository.findAll()); // nếu cần
+        model.addAttribute("body", path + "notifications/form.jsp");
         return "admin/layout/main";
     }
 
-    // Xử lý thêm mới
+// Xử lý thêm mới
     @PostMapping("/add")
     public String addNotification(@ModelAttribute Notification notification) {
         notificationService.add(notification);
@@ -58,9 +72,11 @@ public class NotificationController {
     }
 
     // Xử lý cập nhật
-    @PostMapping("/edit")
-    public String updateNotification(@ModelAttribute Notification notification) {
-        notificationService.update(notification);
+    @PostMapping("/notifications/edit-content")
+    public String updateContent(@ModelAttribute("notification") Notification notification) {
+        Notification existing = notificationRepository.findById(notification.getMaThongBao());
+        existing.setNoiDung(notification.getNoiDung());
+        notificationRepository.update(existing);
         return "redirect:/admin/notifications";
     }
 

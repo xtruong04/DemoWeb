@@ -57,10 +57,10 @@ public class NotificationRepository {
 
     public List<Notification> findAll() {
         String sql
-                = "SELECT n.*, "
-                + "       u.user_id AS u_id, u.name AS u_name, u.email AS u_email, u.role AS u_role, "
-                + "       u.phone AS u_phone, u.address AS u_address, u.language_preference AS u_lang, "
-                + "       a.activity_id AS a_id, a.title AS a_title, a.description AS a_description "
+                = "SELECT n.notification_id, n.user_id, n.activity_id, n.message, n.sent_at, "
+                + "u.user_id AS u_id, u.name AS u_name, u.email AS u_email, u.role AS u_role, "
+                + "u.phone AS u_phone, u.address AS u_address, u.language_preference AS u_lang, "
+                + "a.activity_id AS a_id, a.title AS a_title, a.description AS a_description "
                 + "FROM Notifications n "
                 + "JOIN Users u ON n.user_id = u.user_id "
                 + "LEFT JOIN Activities a ON n.activity_id = a.activity_id";
@@ -68,7 +68,15 @@ public class NotificationRepository {
     }
 
     public Notification findById(int id) {
-        String sql = "SELECT * FROM Notifications WHERE notification_id = ?";
+        String sql
+                = "SELECT n.notification_id, n.user_id, n.activity_id, n.message, n.sent_at, "
+                + "u.user_id AS u_id, u.name AS u_name, u.email AS u_email, u.role AS u_role, "
+                + "u.phone AS u_phone, u.address AS u_address, u.language_preference AS u_lang, "
+                + "a.activity_id AS a_id, a.title AS a_title, a.description AS a_description "
+                + "FROM Notifications n "
+                + "JOIN Users u ON n.user_id = u.user_id "
+                + "LEFT JOIN Activities a ON n.activity_id = a.activity_id "
+                + "WHERE n.notification_id = ?";
         return jdbcTemplate.queryForObject(sql, this::mapRow, id);
     }
 

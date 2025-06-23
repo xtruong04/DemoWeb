@@ -44,7 +44,7 @@
                     <label for="language" class="form-label">Ngôn ngữ ưu tiên</label>
                     <select class="form-select" id="language" name="ngonNguUuTien">
                         <option value="">Choose Langues</option>
-                        <option value="Tiếng Việt" ${param.ngonNguUuTien == 'Tiếng Việt' ? 'selected' : ''}>Tiếng Việt</option>
+                        <option value="Tiếng Việt" ${param.ngonNguUuTien == 'Vietnamese' ? 'selected' : ''}>Vietnamese</option>
                         <option value="English" ${param.ngonNguUuTien == 'English' ? 'selected' : ''}>English</option>
                     </select>
                 </div>

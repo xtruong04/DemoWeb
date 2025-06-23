@@ -68,16 +68,21 @@ public class ActivityController {
     }
 
     // Xử lý cập nhật
-    @PostMapping("/edit")
-    public String updateActivity(@ModelAttribute Activity activity) {
+    @PostMapping("/edit/{id}")
+    public String updateActivity(@PathVariable("id") int id, @ModelAttribute Activity activity) {
+        activity.setMaHoatDong(id); // Đảm bảo id từ URL được set lại vào object
         activityService.update(activity);
         return "redirect:/admin/activities";
-    }
-
+}
+    
     // Xử lý xóa
     @GetMapping("/delete/{id}")
-    public String deleteActivity(@PathVariable("id") int id) {
+        public String deleteActivity
+        (@PathVariable("id")
+        int id
+        
+            ) {
         activityService.delete(id);
-        return "redirect:/admin/activities"; // phải đúng path
+            return "redirect:/admin/activities"; // phải đúng path
+        }
     }
-}

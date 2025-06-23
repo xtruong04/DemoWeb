@@ -13,6 +13,7 @@
             <h3 class="card-title">Notification List</h3>
             <div class="d-flex justify-content-between align-items-center mb-3">
                 <div></div> <!-- Placeholder để căn chỉnh -->
+                <a href="${pageContext.request.contextPath}/admin/notifications/add" class="btn btn-success">+ Add New</a>
             </div>
             <table class="table table-hover">
                 <thead>
@@ -34,7 +35,6 @@
                             <td>${n.noiDung}</td>
                             <td>${n.ngayGui}</td>
                             <td>
-                                <a href="${pageContext.request.contextPath}/admin/notifications/edit/${n.maThongBao}" class="btn btn-sm btn-primary">Sửa</a>
                                 <a href="${pageContext.request.contextPath}/admin/notifications/delete/${n.maThongBao}" class="btn btn-sm btn-danger" onclick="return confirm('Bạn chắc chắn muốn xóa?')">Xóa</a>
                             </td>
                         </tr>
