@@ -4,6 +4,7 @@
     <div class="footer_top">
         <div class="container">
             <div class="row">
+                <!-- Column 1: Logo & social -->
                 <div class="col-xl-4 col-md-6 col-lg-4 ">
                     <div class="footer_widget">
                         <div class="footer_logo">
@@ -11,43 +12,23 @@
                                 <img src="${pageContext.request.contextPath}/resources/img/footer_logo.png" alt="">
                             </a>
                         </div>
-                        <p class="address_text">Online volunteer coordination involves  
-                            <br> organizing and managing , remote 
-                            <br> volunteers using digital tools for task assignment, clear communication
-                            <br> fostering engagement, and ensuring they feel 
-                            <br> valued while working toward shared goals.
+                        <p class="address_text">Online volunteer coordination involves organizing and managing remote 
+                            volunteers using digital tools, clear communication, and fostering engagement.
                         </p>
                         <div class="socail_links">
                             <ul>
-                                <li>
-                                    <a href="#">
-                                        <i class="ti-facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="ti-twitter-alt"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-dribbble"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-instagram"></i>
-                                    </a>
-                                </li>
+                                <li><a href="#"><i class="ti-facebook"></i></a></li>
+                                <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
+                <!-- Column 2: Services -->
                 <div class="col-xl-2 col-md-6 col-lg-2">
                     <div class="footer_widget">
-                        <h3 class="footer_title">
-                            Services
-                        </h3>
+                        <h3 class="footer_title">Services</h3>
                         <ul class="links">
                             <li><a href="#">Donate</a></li>
                             <li><a href="#">Sponsor</a></li>
@@ -58,51 +39,38 @@
                         </ul>
                     </div>
                 </div>
+                <!-- Column 3: Contact -->
                 <div class="col-xl-3 col-md-6 col-lg-3">
                     <div class="footer_widget">
-                        <h3 class="footer_title">
-                            Contacts
-                        </h3>
+                        <h3 class="footer_title">Contacts</h3>
                         <div class="contacts">
-                            <p>+84 982710860 <br>
-                                info@loveuscharity.com <br>
-                                141-145, Điện Biên Phủ, Phường 2, 
-                                Bình Thạnh, Hồ Chí Minh, Vietnam
+                            <p>+84 982710860<br>
+                                info@loveuscharity.com<br>
+                                141-145 Điện Biên Phủ, Bình Thạnh, TP.HCM
                             </p>
                         </div>
                     </div>
                 </div>
+                <!-- Column 4: Top News -->
                 <div class="col-xl-3 col-md-6 col-lg-3">
                     <div class="footer_widget">
-                        <h3 class="footer_title">
-                            Top News
-                        </h3>
+                        <h3 class="footer_title">Top News</h3>
                         <ul class="news_links">
                             <li>
                                 <div class="thumb">
-                                    <a href="#">
-                                        <img src="${pageContext.request.contextPath}/resources/img/news/news_1.png" alt="">
-                                    </a>
+                                    <a href="#"><img src="${pageContext.request.contextPath}/resources/img/news/news_1.png" alt=""></a>
                                 </div>
                                 <div class="info">
-                                    <a href="#">
-                                        <h4>School for African 
-                                            Childrens</h4>
-                                    </a>
+                                    <a href="#"><h4>School for African Childrens</h4></a>
                                     <span>Jun 12, 2019</span>
                                 </div>
                             </li>
                             <li>
                                 <div class="thumb">
-                                    <a href="#">
-                                        <img src="${pageContext.request.contextPath}/resources/img/news/news_2.png" alt="">
-                                    </a>
+                                    <a href="#"><img src="${pageContext.request.contextPath}/resources/img/news/news_2.png" alt=""></a>
                                 </div>
                                 <div class="info">
-                                    <a href="#">
-                                        <h4>School for African 
-                                            Childrens</h4>
-                                    </a>
+                                    <a href="#"><h4>School for African Childrens</h4></a>
                                     <span>Jun 12, 2019</span>
                                 </div>
                             </li>
@@ -112,22 +80,22 @@
             </div>
         </div>
     </div>
+    <!-- Copyright -->
     <div class="copy-right_text">
         <div class="container">
-            <div class="row">
-                <div class="bordered_1px "></div>
-                <div class="col-xl-12">
-                    <p class="copy_right text-center">
-                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        Copyright ©<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-                    </p>
-                </div>
+            <div class="bordered_1px"></div>
+            <div class="col-xl-12">
+                <p class="copy_right text-center">
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright ©<script>document.write(new Date().getFullYear());</script> All rights reserved |
+                    This template is made with <i class="ti-heart" aria-hidden="true"></i> by
+                    <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                    <!-- Link back to Colorlib can't be removed. -->
+                </p>
             </div>
         </div>
     </div>
 </footer>
-<!-- footer_end -->
 
 <!-- JS here -->
 <script src="${pageContext.request.contextPath}/resources/js/vendor/modernizr-3.5.0.min.js"></script>
@@ -148,7 +116,7 @@
 <script src="${pageContext.request.contextPath}/resources/js/jquery.magnific-popup.min.js"></script>
 <script src="${pageContext.request.contextPath}/resources/js/plugins.js"></script>
 <script src="${pageContext.request.contextPath}/resources/js/gijgo.min.js"></script>
-<!--contact js-->
+<!-- Contact JS -->
 <script src="${pageContext.request.contextPath}/resources/js/contact.js"></script>
 <script src="${pageContext.request.contextPath}/resources/js/jquery.ajaxchimp.min.js"></script>
 <script src="${pageContext.request.contextPath}/resources/js/jquery.form.js"></script>
