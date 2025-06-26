@@ -111,47 +111,52 @@ html lang="en">
 </head>
 <body>
     <!-- Sidebar -->
-  <!-- Sidebar -->
-<div class="sidebar" id="sidebar">
-    <h2>Admin Panel</h2>
-    <ul class="nav flex-column">
-        <li class="nav-item">
-            <a class="nav-link ${param.active == 'dashboard' ? 'active' : ''}" href="${pageContext.request.contextPath}/admin/dashboard">
-                <i class="fas fa-chart-line me-2"></i> Dashboard
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link ${param.active == 'activities' ? 'active' : ''}" href="${pageContext.request.contextPath}/admin/activities">
-                <i class="fas fa-calendar-check me-2"></i> Activities
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link ${param.active == 'users' ? 'active' : ''}" href="${pageContext.request.contextPath}/admin/users">
-                <i class="fas fa-user-friends me-2"></i> Users
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link ${param.active == 'notifications' ? 'active' : ''}" href="${pageContext.request.contextPath}/admin/notifications">
-                <i class="fas fa-bell me-2"></i> Notifications
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link ${param.active == 'rating' ? 'active' : ''}" href="${pageContext.request.contextPath}/admin/ratings">
-                <i class="fas fa-star me-2"></i> Ratings
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link ${param.active == 'registrations' ? 'active' : ''}" href="${pageContext.request.contextPath}/admin/registrations">
-                <i class="fas fa-edit me-2"></i> Registrations
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="${pageContext.request.contextPath}/admin/logout">
-                <i class="fas fa-sign-out-alt me-2"></i> Logout
-            </a>
-        </li>
-    </ul>
-</div>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <h2>Admin Panel</h2>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link ${param.active == 'dashboard' ? 'active' : ''}" href="${pageContext.request.contextPath}/admin/dashboard">
+                    <i class="fas fa-chart-line me-2"></i> Dashboard
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ${param.active == 'activities' ? 'active' : ''}" href="${pageContext.request.contextPath}/admin/activities">
+                    <i class="fas fa-calendar-check me-2"></i> Activities
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ${param.active == 'users' ? 'active' : ''}" href="${pageContext.request.contextPath}/admin/users">
+                    <i class="fas fa-user-friends me-2"></i> Users
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ${param.active == 'notifications' ? 'active' : ''}" href="${pageContext.request.contextPath}/admin/notifications">
+                    <i class="fas fa-bell me-2"></i> Notifications
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ${param.active == 'rating' ? 'active' : ''}" href="${pageContext.request.contextPath}/admin/ratings">
+                    <i class="fas fa-star me-2"></i> Ratings
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ${param.active == 'registrations' ? 'active' : ''}" href="${pageContext.request.contextPath}/admin/registrations">
+                    <i class="fas fa-edit me-2"></i> Registrations
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ${param.active == 'scan' ? 'active' : ''}" href="${pageContext.request.contextPath}/scan">
+                    <i class="fas fa-qrcode me-2"></i> QR Check-In
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="${pageContext.request.contextPath}/logout">
+                    <i class="fas fa-sign-out-alt me-2"></i> Logout
+                </a>
+            </li>
+        </ul>
+    </div>
 
     <!-- Top Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
@@ -167,7 +172,7 @@ html lang="en">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="https://via.placeholder.com/40" alt="User Avatar" class="rounded-circle me-2" style="width: 40px; height: 40px;">
-                        <span><c:out value="${sessionScope.currentUser.email}" /></span>
+                        <span><c:out value="${sessionScope.user.email}" /></span>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
                         <li><a class="dropdown-item" href="${pageContext.request.contextPath}/admin/profile">Profile</a></li>
@@ -179,14 +184,14 @@ html lang="en">
     </nav>
 
     <!-- Main Content -->
-  
+
 </div>
 
-    <script>
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('active');
-        }
-    </script>
+<script>
+    function toggleSidebar() {
+        const sidebar = document.getElementById('sidebar');
+        sidebar.classList.toggle('active');
+    }
+</script>
 </body>
 </html>

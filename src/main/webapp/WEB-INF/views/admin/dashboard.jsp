@@ -1,9 +1,10 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <div class="main-content">
     <h3 class="mb-4">Admin Dashboard</h3>
 
-    <!-- Th?ng kê t?ng quan -->
+    <!-- Th?ng kÃª t?ng quan -->
     <div class="row mb-4">
         <div class="col-md-3">
             <div class="card">
@@ -52,19 +53,19 @@
         </div>
     </div>
 
-<!-- JavaScript for Bootstrap validation -->
-<script>
-    (function () {
-        'use strict';
-        var forms = document.querySelectorAll('.needs-validation');
-        Array.prototype.slice.call(forms).forEach(function (form) {
-            form.addEventListener('submit', function (event) {
-                if (!form.checkValidity()) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                }
-                form.classList.add('was-validated');
-            }, false);
-        });
-    })();
-</script>
+    <!-- JavaScript for Bootstrap validation -->
+    <script>
+        (function () {
+            'use strict';
+            var forms = document.querySelectorAll('.needs-validation');
+            Array.prototype.slice.call(forms).forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        })();
+    </script>
