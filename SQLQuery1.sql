@@ -57,9 +57,5 @@ INSERT INTO news (title, date, description, image_url, link) VALUES
 ('Pure Water Is More Essential', '2019-07-18', 'The passage experienced a surge in popularity during the 1960s when used it on their sheets, and again.', 'resources/img/news/1.png', 'single-blog.html'),
 ('Pure Water Is More Essential', '2019-07-18', 'The passage experienced a surge in popularity during the 1960s when used it on their sheets, and again.', 'resources/img/news/2.png', 'single-blog.html');
 
-DROP TABLE IF EXISTS news;
-DROP TABLE IF EXISTS volunteers;
-DROP TABLE IF EXISTS causes;
-DROP TABLE IF EXISTS reasons;
 INSERT INTO volunteers (name, role, image_url, facebook_url, pinterest_url, linkedin_url, twitter_url)
 VALUES (N'Nguyễn Văn A', N'Tình nguyện viên mới', 'resources/img/volenteer/6.jpg', '#', '#', '#', '#');
