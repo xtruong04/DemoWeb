@@ -46,3 +46,11 @@ INSERT INTO Notifications (user_id, activity_id, message, sent_at) VALUES
 (3, 4, N'Hoạt động 4 đã hoàn tất!',            '2025-06-22 13:00:00'),
 (4, 5, N'Tham gia hoạt động 5 ngay!',          '2025-06-23 11:00:00');
 GO
+-- Thêm Roles
+INSERT INTO roles (role_name) VALUES (N'coordinator'), (N'volunteer');
+GO
+-- Gán user_roles
+INSERT INTO user_roles (user_id, role_id) VALUES
+(1, 1), (2, 1), -- Admins
+(3, 2), (4, 2), (5, 2); -- Volunteers
+GO
