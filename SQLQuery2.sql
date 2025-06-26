@@ -67,6 +67,23 @@ CREATE TABLE Notifications (
     FOREIGN KEY (activity_id) REFERENCES Activities(activity_id) ON DELETE NO ACTION
 );
 GO
+    -- Bảng Roles
+CREATE TABLE roles (
+    role_id INT IDENTITY(1,1) PRIMARY KEY,
+    role_name NVARCHAR(50) NOT NULL UNIQUE
+);
+GO
+
+-- Bảng user_roles (nhiều-nhiều)
+CREATE TABLE user_roles (
+    user_id INT NOT NULL,
+    role_id INT NOT NULL,
+    PRIMARY KEY (user_id, role_id),
+    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE,
+    FOREIGN KEY (role_id) REFERENCES roles(role_id) ON DELETE CASCADE
+);
+GO
+
 -- Tạo các chỉ mục
 CREATE INDEX IDX_Registrations_UserActivity ON Registrations(user_id, activity_id);
 GO
